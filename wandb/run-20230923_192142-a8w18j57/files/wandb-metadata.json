@@ -1,0 +1,37 @@
+{
+    "os": "macOS-13.6-arm64-arm-64bit",
+    "python": "3.8.17",
+    "heartbeatAt": "2023-09-23T13:51:43.086149",
+    "startedAt": "2023-09-23T13:51:42.114622",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/HumaticsLAB/GTM-Transformer.git",
+        "commit": "94124d3246c7c22d8b952beeda53639a9ad170e3"
+    },
+    "email": "shamasaifee123@gmail.com",
+    "root": "/Users/irshad/Dev/PyEnv/GTM-Transformer",
+    "host": "Irshads-MacBook-Air.local",
+    "username": "irshad",
+    "executable": "/Users/irshad/Dev/PyEnv/env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 228.27386474609375,
+            "used": 180.1634864807129
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

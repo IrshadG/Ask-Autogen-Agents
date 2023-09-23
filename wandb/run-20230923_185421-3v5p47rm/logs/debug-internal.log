@@ -1,0 +1,189 @@
+2023-09-23 18:54:21,156 INFO    StreamThr :4403 [internal.py:wandb_internal():86] W&B internal server running at pid: 4403, started at: 2023-09-23 18:54:21.154876
+2023-09-23 18:54:21,158 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: status
+2023-09-23 18:54:21,174 INFO    WriterThread:4403 [datastore.py:open_for_write():85] open: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/run-3v5p47rm.wandb
+2023-09-23 18:54:21,175 DEBUG   SenderThread:4403 [sender.py:send():379] send: header
+2023-09-23 18:54:21,207 DEBUG   SenderThread:4403 [sender.py:send():379] send: run
+2023-09-23 18:54:21,979 INFO    SenderThread:4403 [dir_watcher.py:__init__():211] watching files in: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files
+2023-09-23 18:54:21,979 INFO    SenderThread:4403 [sender.py:_start_run_threads():1121] run started: 3v5p47rm with start time 1695475461.15606
+2023-09-23 18:54:21,996 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: check_version
+2023-09-23 18:54:21,997 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: check_version
+2023-09-23 18:54:22,130 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: run_start
+2023-09-23 18:54:22,132 DEBUG   HandlerThread:4403 [system_info.py:__init__():32] System info init
+2023-09-23 18:54:22,132 DEBUG   HandlerThread:4403 [system_info.py:__init__():47] System info init done
+2023-09-23 18:54:22,132 INFO    HandlerThread:4403 [system_monitor.py:start():181] Starting system monitor
+2023-09-23 18:54:22,132 INFO    SystemMonitor:4403 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-23 18:54:22,132 INFO    HandlerThread:4403 [system_monitor.py:probe():201] Collecting system info
+2023-09-23 18:54:22,133 DEBUG   HandlerThread:4403 [system_info.py:probe():196] Probing system
+2023-09-23 18:54:22,133 INFO    SystemMonitor:4403 [interfaces.py:start():190] Started cpu monitoring
+2023-09-23 18:54:22,134 INFO    SystemMonitor:4403 [interfaces.py:start():190] Started disk monitoring
+2023-09-23 18:54:22,136 INFO    SystemMonitor:4403 [interfaces.py:start():190] Started gpuapple monitoring
+2023-09-23 18:54:22,136 INFO    SystemMonitor:4403 [interfaces.py:start():190] Started memory monitoring
+2023-09-23 18:54:22,141 INFO    SystemMonitor:4403 [interfaces.py:start():190] Started network monitoring
+2023-09-23 18:54:22,147 DEBUG   HandlerThread:4403 [system_info.py:_probe_git():181] Probing git
+2023-09-23 18:54:22,184 DEBUG   HandlerThread:4403 [system_info.py:_probe_git():189] Probing git done
+2023-09-23 18:54:22,184 DEBUG   HandlerThread:4403 [system_info.py:probe():244] Probing system done
+2023-09-23 18:54:22,184 DEBUG   HandlerThread:4403 [system_monitor.py:probe():210] {'os': 'macOS-13.6-arm64-arm-64bit', 'python': '3.8.17', 'heartbeatAt': '2023-09-23T13:24:22.133723', 'startedAt': '2023-09-23T13:24:21.136407', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/HumaticsLAB/GTM-Transformer.git', 'commit': '94124d3246c7c22d8b952beeda53639a9ad170e3'}, 'email': 'shamasaifee123@gmail.com', 'root': '/Users/irshad/Dev/PyEnv/GTM-Transformer', 'host': 'Irshads-MacBook-Air.local', 'username': 'irshad', 'executable': '/Users/irshad/Dev/PyEnv/env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 228.27386474609375, 'used': 180.02305221557617}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-09-23 18:54:22,184 INFO    HandlerThread:4403 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-23 18:54:22,185 INFO    HandlerThread:4403 [system_monitor.py:probe():214] Publishing system info
+2023-09-23 18:54:22,185 DEBUG   HandlerThread:4403 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-09-23 18:54:22,185 DEBUG   HandlerThread:4403 [system_info.py:_save_pip():68] Saving pip packages done
+2023-09-23 18:54:22,185 DEBUG   HandlerThread:4403 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-09-23 18:54:22,981 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/conda-environment.yaml
+2023-09-23 18:54:22,981 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/requirements.txt
+2023-09-23 18:54:25,512 DEBUG   HandlerThread:4403 [system_info.py:_save_conda():87] Saving conda packages done
+2023-09-23 18:54:25,513 INFO    HandlerThread:4403 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-23 18:54:25,518 DEBUG   SenderThread:4403 [sender.py:send():379] send: files
+2023-09-23 18:54:25,518 INFO    SenderThread:4403 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-23 18:54:25,521 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-23 18:54:25,522 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-23 18:54:25,522 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: stop_status
+2023-09-23 18:54:25,945 DEBUG   SenderThread:4403 [sender.py:send():379] send: telemetry
+2023-09-23 18:54:25,947 DEBUG   SenderThread:4403 [sender.py:send():379] send: telemetry
+2023-09-23 18:54:25,948 DEBUG   SenderThread:4403 [sender.py:send():379] send: exit
+2023-09-23 18:54:25,948 INFO    SenderThread:4403 [sender.py:send_exit():584] handling exit code: 1
+2023-09-23 18:54:25,948 INFO    SenderThread:4403 [sender.py:send_exit():586] handling runtime: 3
+2023-09-23 18:54:25,951 INFO    SenderThread:4403 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-23 18:54:25,952 INFO    SenderThread:4403 [sender.py:send_exit():592] send defer
+2023-09-23 18:54:25,952 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,952 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 0
+2023-09-23 18:54:25,954 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,954 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-09-23 18:54:25,955 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 1
+2023-09-23 18:54:25,955 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,956 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 1
+2023-09-23 18:54:25,956 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,956 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-09-23 18:54:25,956 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 2
+2023-09-23 18:54:25,956 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,956 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 2
+2023-09-23 18:54:25,956 INFO    HandlerThread:4403 [system_monitor.py:finish():190] Stopping system monitor
+2023-09-23 18:54:25,957 DEBUG   SystemMonitor:4403 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-23 18:54:25,957 INFO    HandlerThread:4403 [interfaces.py:finish():202] Joined cpu monitor
+2023-09-23 18:54:25,957 DEBUG   SystemMonitor:4403 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-23 18:54:25,958 INFO    HandlerThread:4403 [interfaces.py:finish():202] Joined disk monitor
+2023-09-23 18:54:25,958 DEBUG   SystemMonitor:4403 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-23 18:54:25,958 INFO    HandlerThread:4403 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-09-23 18:54:25,959 INFO    HandlerThread:4403 [interfaces.py:finish():202] Joined memory monitor
+2023-09-23 18:54:25,960 INFO    HandlerThread:4403 [interfaces.py:finish():202] Joined network monitor
+2023-09-23 18:54:25,960 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,960 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-09-23 18:54:25,961 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 3
+2023-09-23 18:54:25,961 DEBUG   SenderThread:4403 [sender.py:send():379] send: telemetry
+2023-09-23 18:54:25,961 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,961 DEBUG   SenderThread:4403 [sender.py:send():379] send: stats
+2023-09-23 18:54:25,961 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 3
+2023-09-23 18:54:25,962 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,962 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-09-23 18:54:25,962 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 4
+2023-09-23 18:54:25,962 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,962 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 4
+2023-09-23 18:54:25,962 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,962 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-09-23 18:54:25,962 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 5
+2023-09-23 18:54:25,963 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,963 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 5
+2023-09-23 18:54:25,963 DEBUG   SenderThread:4403 [sender.py:send():379] send: summary
+2023-09-23 18:54:25,964 INFO    SenderThread:4403 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-23 18:54:25,964 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,964 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-09-23 18:54:25,964 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 6
+2023-09-23 18:54:25,965 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:25,965 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 6
+2023-09-23 18:54:25,965 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:25,965 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-09-23 18:54:25,972 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: status_report
+2023-09-23 18:54:25,996 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/conda-environment.yaml
+2023-09-23 18:54:25,996 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/wandb-metadata.json
+2023-09-23 18:54:25,996 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/wandb-summary.json
+2023-09-23 18:54:25,996 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/output.log
+2023-09-23 18:54:26,321 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 7
+2023-09-23 18:54:26,322 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:26,322 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 7
+2023-09-23 18:54:26,322 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:26,323 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-09-23 18:54:26,556 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-23 18:54:26,767 INFO    wandb-upload_0:4403 [upload_job.py:push():131] Uploaded file /var/folders/g1/j7l290r973l70fzx0hmy1hgw0000gn/T/tmpn9uyhqzlwandb/v25jpnhi-wandb-metadata.json
+2023-09-23 18:54:27,003 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/config.yaml
+2023-09-23 18:54:27,961 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 8
+2023-09-23 18:54:27,961 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: poll_exit
+2023-09-23 18:54:27,961 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:27,962 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 8
+2023-09-23 18:54:27,963 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:27,963 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-09-23 18:54:27,963 INFO    SenderThread:4403 [job_builder.py:build():281] Attempting to build job artifact
+2023-09-23 18:54:27,965 INFO    SenderThread:4403 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-09-23 18:54:27,968 INFO    SenderThread:4403 [job_builder.py:build():369] adding wandb-job metadata file
+2023-09-23 18:54:27,974 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 9
+2023-09-23 18:54:27,974 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:27,974 DEBUG   SenderThread:4403 [sender.py:send():379] send: artifact
+2023-09-23 18:54:27,974 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 9
+2023-09-23 18:54:28,008 INFO    Thread-12 :4403 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/output.log
+2023-09-23 18:54:30,684 INFO    wandb-upload_1:4403 [upload_job.py:push():89] Uploaded file /Users/irshad/Library/Application Support/wandb/artifacts/staging/tmptl9ky7ee
+2023-09-23 18:54:30,698 INFO    wandb-upload_0:4403 [upload_job.py:push():89] Uploaded file /Users/irshad/Library/Application Support/wandb/artifacts/staging/tmpbr5jtoz7
+2023-09-23 18:54:31,576 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-23 18:54:33,118 INFO    SenderThread:4403 [sender.py:send_artifact():1453] sent artifact job-https___github.com_HumaticsLAB_GTM-Transformer.git_train.py - {'id': 'QXJ0aWZhY3Q6NTgwNzA0MDgz', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwMDE5NTE1NA==', 'latestArtifact': None}}
+2023-09-23 18:54:33,119 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:33,119 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: status_report
+2023-09-23 18:54:33,119 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-09-23 18:54:33,120 INFO    SenderThread:4403 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-09-23 18:54:34,037 INFO    SenderThread:4403 [dir_watcher.py:finish():388] scan: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files
+2023-09-23 18:54:34,038 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/requirements.txt requirements.txt
+2023-09-23 18:54:34,038 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/output.log output.log
+2023-09-23 18:54:34,038 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/config.yaml config.yaml
+2023-09-23 18:54:34,039 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/wandb-summary.json wandb-summary.json
+2023-09-23 18:54:34,039 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/conda-environment.yaml conda-environment.yaml
+2023-09-23 18:54:34,039 INFO    SenderThread:4403 [dir_watcher.py:finish():402] scan save: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/wandb-metadata.json wandb-metadata.json
+2023-09-23 18:54:34,039 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 10
+2023-09-23 18:54:34,043 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:34,043 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 10
+2023-09-23 18:54:34,046 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:34,050 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-09-23 18:54:34,050 INFO    SenderThread:4403 [file_pusher.py:finish():175] shutting down file pusher
+2023-09-23 18:54:34,778 INFO    wandb-upload_0:4403 [upload_job.py:push():131] Uploaded file /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/output.log
+2023-09-23 18:54:34,895 INFO    wandb-upload_1:4403 [upload_job.py:push():131] Uploaded file /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/requirements.txt
+2023-09-23 18:54:34,975 INFO    wandb-upload_4:4403 [upload_job.py:push():131] Uploaded file /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/conda-environment.yaml
+2023-09-23 18:54:34,977 INFO    wandb-upload_2:4403 [upload_job.py:push():131] Uploaded file /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/config.yaml
+2023-09-23 18:54:34,980 INFO    wandb-upload_3:4403 [upload_job.py:push():131] Uploaded file /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/files/wandb-summary.json
+2023-09-23 18:54:35,181 INFO    Thread-11 :4403 [sender.py:transition_state():612] send defer: 11
+2023-09-23 18:54:35,182 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:35,182 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 11
+2023-09-23 18:54:35,183 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:35,183 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-09-23 18:54:35,184 INFO    SenderThread:4403 [file_pusher.py:join():181] waiting for file pusher
+2023-09-23 18:54:35,184 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 12
+2023-09-23 18:54:35,184 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:35,184 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 12
+2023-09-23 18:54:35,185 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:35,185 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-09-23 18:54:35,185 INFO    SenderThread:4403 [file_stream.py:finish():594] file stream finish called
+2023-09-23 18:54:35,570 INFO    SenderThread:4403 [file_stream.py:finish():598] file stream finish is done
+2023-09-23 18:54:35,570 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 13
+2023-09-23 18:54:35,571 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:35,571 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 13
+2023-09-23 18:54:35,572 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:35,572 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-09-23 18:54:35,572 INFO    SenderThread:4403 [sender.py:transition_state():612] send defer: 14
+2023-09-23 18:54:35,573 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: defer
+2023-09-23 18:54:35,573 DEBUG   SenderThread:4403 [sender.py:send():379] send: final
+2023-09-23 18:54:35,573 INFO    HandlerThread:4403 [handler.py:handle_request_defer():170] handle defer: 14
+2023-09-23 18:54:35,574 DEBUG   SenderThread:4403 [sender.py:send():379] send: footer
+2023-09-23 18:54:35,574 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: defer
+2023-09-23 18:54:35,574 INFO    SenderThread:4403 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-09-23 18:54:35,575 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-23 18:54:35,576 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: poll_exit
+2023-09-23 18:54:35,576 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: server_info
+2023-09-23 18:54:35,577 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: get_summary
+2023-09-23 18:54:35,578 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: server_info
+2023-09-23 18:54:35,582 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: sampled_history
+2023-09-23 18:54:35,582 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: internal_messages
+2023-09-23 18:54:35,583 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: job_info
+2023-09-23 18:54:35,880 DEBUG   SenderThread:4403 [sender.py:send_request():406] send_request: job_info
+2023-09-23 18:54:35,880 INFO    MainThread:4403 [wandb_run.py:_footer_history_summary_info():3557] rendering history
+2023-09-23 18:54:35,880 INFO    MainThread:4403 [wandb_run.py:_footer_history_summary_info():3589] rendering summary
+2023-09-23 18:54:35,881 INFO    MainThread:4403 [wandb_run.py:_footer_sync_info():3516] logging synced files
+2023-09-23 18:54:35,881 DEBUG   HandlerThread:4403 [handler.py:handle_request():144] handle_request: shutdown
+2023-09-23 18:54:35,882 INFO    HandlerThread:4403 [handler.py:finish():840] shutting down handler
+2023-09-23 18:54:36,589 INFO    WriterThread:4403 [datastore.py:close():294] close: /Users/irshad/Dev/PyEnv/GTM-Transformer/wandb/run-20230923_185421-3v5p47rm/run-3v5p47rm.wandb
+2023-09-23 18:54:36,884 INFO    SenderThread:4403 [sender.py:finish():1531] shutting down sender
+2023-09-23 18:54:36,884 INFO    SenderThread:4403 [file_pusher.py:finish():175] shutting down file pusher
+2023-09-23 18:54:36,884 INFO    SenderThread:4403 [file_pusher.py:join():181] waiting for file pusher
