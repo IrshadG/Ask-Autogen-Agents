@@ -3,9 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import pytorch_lightning as pl
-from transformers import pipeline
+from transformers import pipeline, Adafactor
 from torchvision import models
-from fairseq.optim.adafactor import Adafactor
 
 
 class PositionalEncoding(nn.Module):
@@ -103,12 +102,12 @@ class GTrendEmbedder(nn.Module):
         split = math.gcd(size, forecast_horizon)
         for i in range(0, size, split):
             mask[i:i+split, i:i+split] = 1
-        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cpu')
+        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cuda')
         return mask
     
     def _generate_square_subsequent_mask(self, size):
         mask = (torch.triu(torch.ones(size, size)) == 1).transpose(0, 1)
-        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cpu')
+        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cuda')
         return mask
 
     def forward(self, gtrends):
@@ -145,7 +144,7 @@ class TextEmbedder(nn.Module):
         # BERT gives us embeddings for [CLS] ..  [EOS], which is why we only average the embeddings in the range [1:-1] 
         # We're not fine tuning BERT and we don't want the noise coming from [CLS] or [EOS]
         word_embeddings = [torch.FloatTensor(x[0][1:-1]).mean(axis=0) for x in word_embeddings] 
-        word_embeddings = torch.stack(word_embeddings).to('cpu')
+        word_embeddings = torch.stack(word_embeddings).to('cuda')
         
         # Embed to our embedding space
         word_embeddings = self.dropout(self.fc(word_embeddings))
@@ -265,7 +264,7 @@ class GTM(pl.LightningModule):
         )
     def _generate_square_subsequent_mask(self, size):
         mask = (torch.triu(torch.ones(size, size)) == 1).transpose(0, 1)
-        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cpu')
+        mask = mask.float().masked_fill(mask == 0, float('-inf')).masked_fill(mask == 1, float(0.0)).to('cuda')
         return mask
 
     def forward(self, category, color, fabric, temporal_features, gtrends, images):
@@ -280,7 +279,7 @@ class GTM(pl.LightningModule):
 
         if self.autoregressive == 1:
             # Decode
-            tgt = torch.zeros(self.output_len, gtrend_encoding.shape[1], gtrend_encoding.shape[-1]).to('cpu')
+            tgt = torch.zeros(self.output_len, gtrend_encoding.shape[1], gtrend_encoding.shape[-1]).to('cuda')
             tgt[0] = static_feature_fusion
             tgt = self.pos_encoder(tgt)
             tgt_mask = self._generate_square_subsequent_mask(self.output_len)
