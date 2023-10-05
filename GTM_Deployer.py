@@ -1,8 +1,7 @@
-#python RunPOP/GTM_Deployer.py
+#streamlit run RunPOP/GTM_Deployer.py
 ############################ IMPORT DEPENDENCIES ##############################
 
 import streamlit as st
-import gradio as gr
 import torch
 import pandas as pd
 import numpy as np
@@ -75,7 +74,7 @@ pl.seed_everything(args.seed)
 # Load sales data    
 test_df = pd.read_csv(Path(args.data_folder + 'test.csv'), parse_dates=['release_date'])
 item_codes = test_df['external_code'].values
-img_paths = test_df['image_path'][5:]
+img_paths = test_df['image_path']
 
  # Load category and color encodings
 cat_dict = torch.load(Path(args.data_folder + 'category_labels.pt'))
@@ -125,21 +124,24 @@ def predict_sales(img_name):
 
     #Fix the path names
     for i in img_paths:
-        n_imgs.append(i[5:])
-
+        name = i[5:]
+        n_imgs.append(name)
+        #st.write(name)
+    
     index = n_imgs.index(img_name)
+
     #st.write("Index is: " + str(index))
     test_loader = load_dataloader()
 
-    category = get_key_from_dict(cat_dict, [test_loader.dataset[index][1].numpy()])[0]
-    color = get_key_from_dict(col_dict, [test_loader.dataset[index][2].numpy()])[0]
-    fabric = get_key_from_dict(fab_dict, [test_loader.dataset[index][3].numpy()])[0]
+    str_category = get_key_from_dict(cat_dict, [test_loader.dataset[index][1].numpy()])[0]
+    str_color = get_key_from_dict(col_dict, [test_loader.dataset[index][2].numpy()])[0]
+    str_fabric = get_key_from_dict(fab_dict, [test_loader.dataset[index][3].numpy()])[0]
 
     st.divider()
     st.image(uploaded_file, width=168, caption='Uploaded image')
-    st.write("Category - " + str(category))
-    st.write("Color - " + str(color))
-    st.write("Fabric - " + str(fabric))
+    st.write("Category - " + str(str_category))
+    st.write("Color - " + str(str_color))
+    st.write("Fabric - " + str(str_fabric))
 
     #Prediction
     test_data = test_loader.dataset[index]
